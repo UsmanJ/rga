@@ -1,11 +1,16 @@
-# rga-assessment
+# RGA
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+## Technologies Used
+
+This application was built using JavaScript and the AngularJS framework.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+After cloning the repo, go into the root folder of the project and:
+
+Run `npm install`<br>
+Run `grunt install`<br>
+Run `grunt serve` to view the application
 
 ## Testing
 
