@@ -8,18 +8,29 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body ng-app="rgaAssessmentApp" id="demo1">
+  <body ng-app="rgaAssessmentApp" id="demo1" ng-controller="MainCtrl as main">
 
     <div class="container">
       <div class="mainDiv">
         <h1 class="page-header" id="demo1PageName"> Demo 1</h1>
+        <div class="content">
+          <form name="pharmacyForm">
+            <div class="result" id="demo1Result" ng-show="selected">
+              <p> Address: </p>
+              <p>{{selected.address1}}, {{selected.address2}}, {{selected.city}}, {{selected.postcode}}</p>
+            </div>
+            <div id="demo1Select">
+              <label for="repeatSelect"> Find Pharmacy: </label><br>
+              <select name="repeatSelect" id="repeatSelect" ng-model="selected" ng-options="pharmacy.organisation_name for pharmacy in main.pharmacies.result | orderBy:'organisation_name'">
+              </select>
+            </div>
+          </form>
+        </div>
         <div class="buttons" id="demoButtons">
           <a href="/" class="button1" id="demo1Button1">BACK TO HOME PAGE</a>
         </div>
       </div>
     </div>
-
-
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -31,6 +42,7 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-</body>
+    <script src="scripts/controllers/demo1.js"></script>
+    <script src="scripts/factories/apifactory.js"></script>
+  </body>
 </html>

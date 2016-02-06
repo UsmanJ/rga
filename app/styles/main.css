@@ -6,7 +6,7 @@ body {
 .mainDiv {
   background-color: white;
   width: 600px;
-  height: 250px;
+  height: 350px;
   margin: auto;
   margin-top: 150px;
   box-shadow: 5px 5px 2px #888888;
@@ -96,6 +96,7 @@ a, a:visited, a:hover, a:active {
 #demoButtons {
   width: 250px;
   margin-left: 185px;
+  margin-top: 70px;
 }
 
 #demo2PageName {
@@ -103,4 +104,13 @@ a, a:visited, a:hover, a:active {
   padding-top: 50px;
   padding-left: 250px;
   padding-bottom: 35px;
+}
+
+#demo1Result {
+  float: right;
+  padding-right: 40px;
+}
+
+#demo1Select {
+  margin-left: 20px;
 }
