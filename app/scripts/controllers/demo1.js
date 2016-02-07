@@ -6,7 +6,6 @@ angular.module('rgaAssessmentApp')
     var self = this;
 
     self.pharmacies = {};
-    self.hello = "hello";
 
     self.getPharmacies = function() {
       Pharmacies.get()

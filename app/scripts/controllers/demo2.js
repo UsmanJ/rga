@@ -1,23 +1,11 @@
 'use strict';
 
 angular.module('rgaAssessmentApp')
-  .controller('MainCtrl', ['$scope', 'Pharmacies', function ($scope, Pharmacies) {
+  .controller('MainCtrl', ['$scope', function ($scope) {
 
     var self = this;
 
-    self.pharmacies= {};
-    self.hello = "hello";
-
-    self.getPharmacies = function() {
-      Pharmacies.get()
-        .then(function(response) {
-          self.pharmacies = response.data;
-          console.log(self.pharmacies.result);
-      });
-    };
-
-    angular.element(document).ready(function () {
-      self.getPharmacies();
-    });
+    self.gender = [ "male", "female" ];
+    self.percentage = [ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ]
 
 }]);
