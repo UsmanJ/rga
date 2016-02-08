@@ -141,9 +141,13 @@ a, a:visited, a:hover, a:active {
 }
 
 .gender {
-
+  float: left;
 }
 
 .percentage {
-  
+
+}
+
+.addBtn {
+  float: right;
 }

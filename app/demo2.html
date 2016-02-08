@@ -17,28 +17,77 @@
           <label for="gender" id="gender">Gender:</label>
           <label for="percentage" id="percentage"> Percentage </label>
         </div>
-        <div class="gender">
-          <select id="gender" name="gender">
-            <option value="">Choose a gender</option>
-            <option value="F">Female</option>
-            <option value="M">Male</option>
-          </select>
+        <div class="data1">
+          <div class="gender">
+            <select id="genderValue" name="gender">
+              <option value="">Choose a gender</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+            </select>
+          </div>
+          <div class="percentage">
+            <select id="percentageValue" name="percentage">
+              <option value="">Choose a percentage</option>
+              <option value="0">0%</option>
+              <option value="10">10%</option>
+              <option value="20">20%</option>
+              <option value="30">30%</option>
+              <option value="40">40%</option>
+              <option value="50">50%</option>
+              <option value="60">60%</option>
+              <option value="70">70%</option>
+              <option value="80">80%</option>
+              <option value="90">90%</option>
+              <option value="100">100%</option>
+            </select>
+          </div>
+          <button class="addBtn" ng-click="main.add()">Add</button>
+          <div class="data" ng-show="main.dataAvailable1">
+            <div class="gender">
+              <p> {{main.gender}} </p>
+            </div>
+            <div class="percentage">
+              <p> {{main.data['Male']}}% </p>
+            </div>
+            <button class="removeBtn" ng-click="main.remove(data)">Remove</button>
+          </div>
         </div>
-        <div class="percentage">
-          <select id="percentage" name="percentage">
-            <option value="">Choose a percentage</option>
-            <option value="0">0%</option>
-            <option value="10">10%</option>
-            <option value="20">20%</option>
-            <option value="30">30%</option>
-            <option value="40">40%</option>
-            <option value="50">50%</option>
-            <option value="60">60%</option>
-            <option value="70">70%</option>
-            <option value="80">80%</option>
-            <option value="90">90%</option>
-            <option value="100">100%</option>
-          </select>
+
+
+        <div class="data2">
+          <div class="gender">
+            <select id="genderValue" name="gender">
+              <option value="">Choose a gender</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+            </select>
+          </div>
+          <div class="percentage">
+            <select id="percentageValue" name="percentage">
+              <option value="">Choose a percentage</option>
+              <option value="0">0%</option>
+              <option value="10">10%</option>
+              <option value="20">20%</option>
+              <option value="30">30%</option>
+              <option value="40">40%</option>
+              <option value="50">50%</option>
+              <option value="60">60%</option>
+              <option value="70">70%</option>
+              <option value="80">80%</option>
+              <option value="90">90%</option>
+              <option value="100">100%</option>
+            </select>
+          </div>
+          <button class="addBtn" ng-click="main.add()">Add</button>
+          <div class="data" ng-show="main.dataAvailable2">
+            <div class="gender">
+              <p> {{main.gender}} </p>
+            </div>
+            <div class="percentage">
+              <p> {{main.data['Male']}} </p>
+            </div>
+            <button class="removeBtn" ng-click="main.remove(data)">Remove</button>
+          </div>
         </div>
         <div class="buttons" id="demoButtons">
           <a href="/" class="button1" id="demo2Button1">BACK TO HOME PAGE</a>
